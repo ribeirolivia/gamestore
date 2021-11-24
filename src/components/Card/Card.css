@@ -1,0 +1,23 @@
+.card-img-top {
+  height: 90vh;
+}
+.card{
+    border: none;
+    display: flex;
+}
+.card-text {
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.card-years{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

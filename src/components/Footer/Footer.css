@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:rgb(13, 16, 20);
+  padding: 3rem 0;
+  color: #fff;
+}
+
+.footercontato {
+  font-size: 1.6rem;
+  padding: .8rem;
+  background-color: rgb(13, 16, 20);
+}
+span{
+  
+  background-color: rgb(13, 16, 20);
+}
+.footertext{
+  font-size: .8rem;
+}

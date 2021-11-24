@@ -1,0 +1,16 @@
+.cardlist {
+  box-shadow: 5px 5px 15px 5px rgb(38, 38, 66);
+  margin: 0 1rem 1.2rem;
+  background-color: rgb(68, 69, 83);
+  align-items: center;
+  border-radius: 1rem;
+}
+.card-list {
+  display: flex;
+
+}
+.cardimg {
+  width: 100%;
+  height: 10rem;
+  border-radius: 1rem;
+}

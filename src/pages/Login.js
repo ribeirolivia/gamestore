@@ -1,6 +1,24 @@
 import React from "react";
+import { useState } from "react";
+import axios from "axios";
 
 const Login = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const login = {
+      email: email,
+      password: password,
+    }
+
+    axios.post('/auth/login', login)
+    .then(response())
+  }
+
   return (
     <div className="card-body">
       <div className="card">

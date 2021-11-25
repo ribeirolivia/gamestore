@@ -1,7 +1,25 @@
 import React from 'react';
 import './CardList.css';
+import { useNavigate } from 'react-router-dom'
 
 const CardList = (props) => {
+
+    const navigate = useNavigate();
+
+    const goToGameNavigate = () => {
+        navigate('/game', { state: props.id })
+    }
+
+    const favorite = () => {
+        const token = localStorage.token;
+        const config = {
+            headers: { Authorization: `Bearer ${token}`}
+        }
+        const id = props.id;
+
+        axios.get(`/game/favorite/${id}`)
+    }
+
     return (
         <div className="card-list">
             

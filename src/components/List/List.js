@@ -1,40 +1,32 @@
 import React from 'react';
 import Container from '../Container/Container';
 import CardList from '../CardList/CardList';
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const List = () => {
+    const [games, setGames] = useState([]);
+    const [mounted, setMounted] = useState(false);
+    const getData = async() => {
+        await axios.get("/game/findMany")
+        .then(response =>{
+            setGames(response.data)
+        })
+    }
+
+    useEffect(() =>{
+        setMounted(true)
+        getData()
+    }, [mounted])
+
     return (
         <div>
             <Container>
             <CardList
-                image='https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/definitive-edition/BattlefieldVDefinitiveED_prefeaturemodule_en_row_v1.jpg/eba28f3e-ae93-48e7-9fe9-886f39919584/original.jpg'
-                name="Black Friday GAME STORE"
-                valor="R$200,00"
-                />
-                <CardList
-                image='https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/definitive-edition/BattlefieldVDefinitiveED_prefeaturemodule_en_row_v1.jpg/eba28f3e-ae93-48e7-9fe9-886f39919584/original.jpg'
-                name="Black Friday GAME STORE"
-                valor="R$200,00"
-                />
-                <CardList
-                image='https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/definitive-edition/BattlefieldVDefinitiveED_prefeaturemodule_en_row_v1.jpg/eba28f3e-ae93-48e7-9fe9-886f39919584/original.jpg'
-                name="Black Friday GAME STORE"
-                valor="R$200,00"
-                />
-                <CardList
-                image='https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/definitive-edition/BattlefieldVDefinitiveED_prefeaturemodule_en_row_v1.jpg/eba28f3e-ae93-48e7-9fe9-886f39919584/original.jpg'
-                name="Black Friday GAME STORE"
-                valor="R$200,00"
-                />
-                <CardList
-                image='https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/definitive-edition/BattlefieldVDefinitiveED_prefeaturemodule_en_row_v1.jpg/eba28f3e-ae93-48e7-9fe9-886f39919584/original.jpg'
-                name="Black Friday GAME STORE"
-                valor="R$200,00"
-                />
-                <CardList
-                image='https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/definitive-edition/BattlefieldVDefinitiveED_prefeaturemodule_en_row_v1.jpg/eba28f3e-ae93-48e7-9fe9-886f39919584/original.jpg'
-                name="Black Friday GAME STORE"
-                valor="R$200,00"
+                image={games.image}
+                name={games.name}
+                valor={games.price}
+                key={games.id}
                 />
             </Container>
         </div>

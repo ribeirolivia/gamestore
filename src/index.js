@@ -10,7 +10,7 @@ import axios from "axios";
 import Criar from '../src/pages/Criar/Criar';
 import Perfil from '../src/pages/Perfil/Perfil';
 import Game from '../src/pages/Game/Game'
-import Favorite from '../src/pages/Favorites/Favorites'
+import Favorites from '../src/pages/Favorites/Favorites'
 
 axios.defaults.baseURL = "https://nintendo-shop.herokuapp.com";
 axios.defaults.headers.port["content-Type"] = "application/json";
@@ -26,7 +26,7 @@ ReactDOM.render(
       <Route path='/criar' element={<Criar/>}/>
       <Route path='/game' element={<Game/>}/>
       <Route path='/perfil' element={<Perfil/>}/>
-      <Route path='/favorite' element={<Favorite/>}/>
+      <Route path='/favorite' element={<Favorites/>}/>
 
     
       </Routes>

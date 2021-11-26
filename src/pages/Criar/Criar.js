@@ -15,10 +15,10 @@ const Criar = () => {
         event.preventDefault();
 
         const user = {
-            name: name
-            email: email
-            login: login
-            senha: senha
+            name: name,
+            email: email,
+            login: login,
+            senha: senha,
             confirmaSenha: confirmaSenha
         }
         axios.post('user/register', user)

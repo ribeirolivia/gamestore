@@ -1,41 +1,26 @@
 import React from "react";
 import "./Card.css";
-import axios from "axios";
-import { useState, useEffect } from "react";
-
-const Card = (props) => {
 
 
-  const [games, setGames] = useState([]);
-  const [mounted, setMounted] = useState(false);
-  const getData = async() => {
-    await axios.get(`/game/find/${props.id}`)
-    .then(response => {
-          if(mounted) {
-            setGames(response.data)
-          }
-        })
-    }
+const Card = () => {
 
-    useEffect(() => {
-        setMounted(true)
-        getData()
-    }, [mounted])
+
+
 
 
   return (
     <div>
       <div className="card">
-        <img src={games.image} className="card-img-top" alt={games.name} />
+        <img src='https://cdn-ext.fanatical.com/production/product/1280x720/69e30985-ca02-4054-82d1-810de82c6c18.jpeg' className="card-img-top" alt='Battlefield 2042' />
         <div className="card-body">
-          <h5 className="card-text">{games.name}</h5>
+          <h5 className="card-text">BATTLEFIELD 2042</h5>
         </div>
         <div className="card-body">
-          <p className="card-text">{games.valor}</p>
+          <p className="card-text">R$ 200,00</p>
         </div>
         <div className="card-years">
-          <p className="card">{games.years}</p>
-          <p className="card-text">{games.classification}</p>
+          <p className="card">16</p>
+          <p className="card-text">Violência</p>
         </div>
       </div>
     </div>

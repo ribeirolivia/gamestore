@@ -21,15 +21,17 @@ const List = () => {
   return (
     <div>
       <Container>
-        {games.map((game) => {
+        {
+        games.map(game => (
           <CardList
             id={game.id}
             image={game.image}
             name={game.name}
             valor={game.price}
             key={game.id}
-          />;
-        })}
+          />
+        ))
+        }
       </Container>
     </div>
   );

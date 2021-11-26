@@ -7,10 +7,10 @@ const Card = (props) => {
 
 
   const [games, setGames] = useState([]);
-    const [mounted, setMounted] = useState(false);
-    const getData = async() => {
-        await axios.get(`/game/find/${props.id}`)
-        .then(response => {
+  const [mounted, setMounted] = useState(false);
+  const getData = async() => {
+    await axios.get(`/game/find/${props.id}`)
+    .then(response => {
           if(mounted) {
             setGames(response.data)
           }

@@ -1,6 +1,8 @@
 import React from 'react';
 import './CardList.css';
 import { useNavigate } from 'react-router-dom'
+import axios from "axios";
+import { FaStar } from 'react-icons/fa';
 
 const CardList = (props) => {
 
@@ -23,7 +25,7 @@ const CardList = (props) => {
     return (
         <div className="card-list">
             
-            <div className="cardlist" >
+            <div className="cardlist" onClick={goToGameNavigate} >
                 <img src={props.image} className="cardimg" alt={props.name}/>
                 <div className="card-body">
                     <h5 className="card-text">{props.name}</h5>
@@ -32,7 +34,9 @@ const CardList = (props) => {
                     <p className="card-text">{props.valor}</p>
                 </div>
             </div>
-
+            <button className="favorite" onClick={favorite}>
+                <FaStar/>
+            </button>
         </div>
     )
 }

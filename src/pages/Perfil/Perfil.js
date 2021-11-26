@@ -26,8 +26,11 @@ const Perfil = () => {
 
 
     return (
-        <div>
-            
+        <div className='perfil'>
+            <div className='perfilimg'>
+                <img src='https://lh3.googleusercontent.com/proxy/M9reMOegNK6Vu24YICaHF1XeYHRzpIwa8MXT1efpHDNj83f4GicaGy8KxGbVQZljo5GKajxQwB0pPTLrLgDi9O_1qvHayLwZobHVhjwoCxqBUiczR9N2k3lszydKONvSk5L5VyAMjtNaTEUTQ_Xn_YdRS5gcx5-Sntg' alt='Rex'/>
+
+            </div>
 
 
 
@@ -46,4 +49,4 @@ const Perfil = () => {
     )
 }
 
-export default Perfil
+export default Perfil;

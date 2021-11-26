@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
-import { FaStar, FaUserSecret } from "react-icons/fa";
-import Login from "../../pages/Login";
+import { FaStar, FaUserSecret, FaArrowUp, FaChild } from "react-icons/fa";
+
 
 function Navbar(props) {
   return (
@@ -9,15 +9,23 @@ function Navbar(props) {
       <h1 className="navbar__text">GAME STORE</h1>
 
       <a className="navbar__text">
-        <FaStar className="navbar__text" href="/favoritos" />
+        <FaStar className="navbar__text" href="/favorite" />
         <span className="navbar__text">Favoritados</span>
       </a>
 
       <a className="navbar__text">
-        <FaUserSecret className="navbar__text" href={<Login/>} />
+        <FaUserSecret className="navbar__text" href='/login' />
         <span className="navbar__text">Entre</span>
       </a>
+      
+      <a className="navbar__text">
+        <FaArrowUp className="navbar__text" href='/criar' />
+      </a>
 
+      <a className="navbar__text">
+        <FaChild className="navbar__text" href='/perfil' />
+      </a>
+      
       <form onSubmit={props.onSubmit} className="navbar__input">
         <input
           className="navbar__place"

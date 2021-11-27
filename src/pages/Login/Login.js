@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import './Login.css'
 
 const Login = () => {
 
@@ -43,7 +44,7 @@ const Login = () => {
         </form>
         <div className='login-create'>
           <span>Ainda não possui uma conta?</span>
-          <a className='btn-create' href='/register'>Criar uma conta GAME STORE</a>
+          <a className='btn-create' href='/criar'>Criar uma conta GAME STORE</a>
         </div>
       </div>
     </div>

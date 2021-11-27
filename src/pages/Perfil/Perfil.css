@@ -1,0 +1,13 @@
+.perfilimg{
+    width: 10rem;
+    border-radius: 5rem;
+}
+span, h3{
+    color: #fff;
+    
+}
+.perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

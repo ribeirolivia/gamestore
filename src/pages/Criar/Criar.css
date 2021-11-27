@@ -1,0 +1,22 @@
+.criar{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+label, h2{
+    color: #fff;
+}
+.criar-container h2 {
+    text-align: center;
+    padding: 4rem;
+    font-weight: 500;
+}
+
+.criar-form {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin: 0 0 4rem 0;
+}

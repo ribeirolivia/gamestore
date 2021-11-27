@@ -43,7 +43,7 @@ const Login = () => {
         </form>
         <div className='login-create'>
           <span>Ainda não possui uma conta?</span>
-          <a className='btn-create' href='/register'>Criar uma conta Nintendo</a>
+          <a className='btn-create' href='/register'>Criar uma conta GAME STORE</a>
         </div>
       </div>
     </div>

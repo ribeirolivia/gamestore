@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../components/Card/Card";
-import Footer from "../../components/Footer/Footer";
+import Container from "../../components/Container/Container";
 import List from "../../components/List/List";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -23,8 +23,9 @@ const Home = () => {
     <div className="home">
       
       <Card/>
-      
+      <Container>
       <List />
+      </Container>
 
     </div>
   );

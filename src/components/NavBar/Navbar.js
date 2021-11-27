@@ -5,8 +5,9 @@ import { FaStar, FaUserSecret, FaArrowUp, FaChild } from "react-icons/fa";
 function Navbar(props) {
   return (
     <div className="navbar">
+      <a className="navbar__text" href="/">
       <h1 className="navbar__text">GAME STORE</h1>
-
+      </a>
       <a className="navbar__text" href="/favorite">
         <FaStar/>
         <span className="navbar__text">Favoritados</span>

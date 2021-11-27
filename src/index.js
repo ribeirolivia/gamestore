@@ -13,7 +13,7 @@ import Game from '../src/pages/Game/Game'
 import Favorites from '../src/pages/Favorites/Favorites'
 
 axios.defaults.baseURL = "https://nintendo-shop.herokuapp.com";
-axios.defaults.headers.port["content-Type"] = "application/json";
+axios.defaults.headers.post["content-Type"] = "application/json";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -22,22 +22,10 @@ const Home = () => {
   return (
     <div className="home">
       
-        {
-            games.map(game => (
-                <Card
-                    id={game.id}
-                    image={game.image}
-                    name={game.name}
-                    valor={game.price}
-                    years={game.year}
-                    classification={game}
-                />
-            ))
-        }
+      <Card/>
       
       <List />
 
-      <Footer />
     </div>
   );
 };

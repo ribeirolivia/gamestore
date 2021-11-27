@@ -7,10 +7,21 @@
 }
 .card-list {
   display: flex;
-
+  width: 15rem;
+  height: 21rem;
+  cursor:pointer;
+  text-decoration: none;
 }
 .cardimg {
-  width: 100%;
+  width: 15rem;
   height: 10rem;
   border-radius: 1rem;
+}
+.cardimg img{
+  width: 15rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+.card-text{
+  background-color: rgb(68, 69, 83);
 }

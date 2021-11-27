@@ -23,18 +23,16 @@ const CardList = (props) => {
 
   return (
     <div className="card-list">
-      <div className="cardlist" onClick={goToGameNavigate}>
-        <img src={props.image} className="cardimg" alt={props.name} />
-        <div className="card-body">
-          <h5 className="card-text">{props.name}</h5>
-        </div>
-        <div className="card-body">
-          <p className="card-text">{props.valor}</p>
-        </div>
-      </div>
-      <button className="favorite" onClick={favorite}>
+        <div className="cardlist" onClick={goToGameNavigate}>
+            <div className="cardimg">
+                <img src={props.image} className="cardimg" alt={props.name} />
+            </div>
+            <h5 className="card-text">{props.name}</h5>
+            <p className="card-text">{'R$' + props.valor}</p>        
+        <button className="favorite" onClick={favorite}>
         <FaStar />
-      </button>
+        </button>
+        </div>
     </div>
   );
 };

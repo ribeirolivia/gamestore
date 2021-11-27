@@ -19,10 +19,12 @@ function Navbar(props) {
 
       <a className="navbar__text" href="/criar">
         <FaArrowUp/>
+        <span className="navbar__text">Novo usuário</span>
       </a>
 
       <a className="navbar__text" href="/perfil">
         <FaChild/>
+        <span className="navbar__text">Perfil</span>
       </a>
 
       <form onSubmit={props.onSubmit} className="navbar__input">
